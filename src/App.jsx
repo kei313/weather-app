@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 
-const App = () => {
+function App() {
   const [weatherData, setWeatherData] = useState(null);
   const [loading, setLoading] = useState(false);
   const [city, setCity] = useState("");
-  const apiKey = "9c91e5a91ce7cdc6e8c4c8700e06e925";
+  const apiKey = "";
 
   /*
   USEEFFECT!!!!
@@ -36,7 +36,6 @@ const App = () => {
     setLoading(false);
   };
   */
-
   useEffect(() => {
     const fetchData = async () => {
       if (!city) {
@@ -77,7 +76,7 @@ const App = () => {
           value={city}
           onChange={(event) => setCity(event.target.value)}
         />
-        {/*<button type="submit">Get Weather</button> after adding use effect not working*/}
+        {/*<button type="submit">Get Weather</button>*/}
       </form>
       {loading ? (
         <p>Loading...</p>
